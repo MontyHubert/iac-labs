@@ -16,7 +16,9 @@ jobs:
   build:
   
       runs-on: ubuntu-latest
-      
+      strategy:
+        matrix:
+          os: [ "ubuntu-latest", "windows-latest" ]
       defaults:
         run:
            working-directory: ./example-app
@@ -44,6 +46,9 @@ jobs:
   lint:
   
       runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          os: [ "ubuntu-latest", "windows-latest" ]
       
       defaults:
         run:
@@ -72,6 +77,9 @@ jobs:
   formatter:
   
       runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          os: [ "ubuntu-latest", "windows-latest" ]
       
       defaults:
         run:
@@ -100,6 +108,9 @@ jobs:
   security:
   
       runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          os: [ "ubuntu-latest", "windows-latest" ]
       
       defaults:
         run:
@@ -128,6 +139,9 @@ jobs:
   unittest:
   
       runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          os: [ "ubuntu-latest", "windows-latest" ]
       
       defaults:
         run:
